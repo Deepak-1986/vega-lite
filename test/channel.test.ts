@@ -25,6 +25,10 @@ describe('channel', () => {
         without(UNIT_CHANNELS, [
           'x2',
           'y2',
+          'xError',
+          'yError',
+          'xError2',
+          'yError2',
           'latitude',
           'longitude',
           'latitude2',

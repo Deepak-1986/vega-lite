@@ -418,19 +418,19 @@ function errorBarAggregationAndCalculation<
       postAggregateCalculates = [
         {
           calculate: `datum.${continuousFieldName} + datum.${continuousAxisChannelDefError.field}`,
-          as: `lower_` + continuousFieldName
+          as: `upper_` + continuousFieldName
         }
       ];
 
       if (continuousAxisChannelDefError2) {
         postAggregateCalculates.push({
           calculate: `datum.${continuousFieldName} + datum.${continuousAxisChannelDefError2.field}`,
-          as: `upper_` + continuousFieldName
+          as: `lower_` + continuousFieldName
         });
       } else {
         postAggregateCalculates.push({
           calculate: `datum.${continuousFieldName} - datum.${continuousAxisChannelDefError.field}`,
-          as: `upper_` + continuousFieldName
+          as: `lower_` + continuousFieldName
         });
       }
     }
